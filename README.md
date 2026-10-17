@@ -48,7 +48,6 @@ QRcode/
 │  ├─ src/
 │  ├─ package.json
 │  └─ uploads/
-├─ .env.example
 ├─ .gitignore
 ├─ package.json
 ├─ package-lock.json
@@ -64,21 +63,7 @@ QRcode/
 
 ## Environment Setup
 
-1. Copy the sample environment file into the repository root as `.env`.
-
-PowerShell:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-macOS/Linux:
-
-```bash
-cp .env.example .env
-```
-
-2. Update the values in `.env` for your environment. The backend loads this root-level file even when started through its workspace script.
+Create a private `.env` file in the repository root and add the configuration values below for your environment. The backend loads this root-level file even when started through its workspace script. Do not upload `.env` to GitHub.
 
 Example values:
 
@@ -101,7 +86,7 @@ VITE_SUPPORT_PHONE=7710 900 333
 
 The support phone defaults to Ve R Mobility Solutions at `7710 900 333`; set `VITE_SUPPORT_PHONE` to override it. Add a real support email before sharing QR codes if email support is required.
 
-3. Install dependencies from the repo root:
+Install dependencies from the repo root:
 
 ```bash
 npm install
